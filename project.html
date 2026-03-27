@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Projects | Samuel Irungu</title>
+		<title>Project | Tree Species Classification</title>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
@@ -15,18 +17,44 @@
 					<li class="active"><a href="project.html">Projects</a></li>
 				</ul>
 			</nav>
+
 			<div id="main">
 				<section class="post">
 					<header class="major">
-						<h1>Project Showcase</h1>
+						<span class="date">Geospatial Machine Learning</span>
+						<h1>🌳 Tree Species Classification</h1>
+						<p>Classifying tree species using multi-source remote sensing data.</p>
 					</header>
-					<h2>Analysis of Social Data in Kenya</h2>
-					<p>Detailed breakdown of your methodology, the libraries used (R/Python), and the final impact of the research.</p>
-					<pre><code># Example Code Snippet
-library(ggplot2)
-ggplot(data, aes(x=variable)) + geom_histogram()</code></pre>
+					<div class="image main"><img src="images/forestry_remote_sensing.jpg" alt="Sentinel Satellite Data" /></div>
+					
+					<h3>📌 Overview</h3>
+					<p>This project implements an end-to-end geospatial machine learning pipeline for classifying tree species using multi-source remote sensing data (Sentinel-1 SAR and Sentinel-2 optical).</p>
+
+					<h3>🚀 Features</h3>
+					<ul>
+						<li>Feature extraction from Sentinel-1 and Sentinel-2.</li>
+						<li>Vegetation indices calculation (NDVI, EVI, SAVI).</li>
+						<li>Integration of terrain and climate data.</li>
+						<li>ML Comparison: Random Forest, XGBoost, and LightGBM.</li>
+					</ul>
+
+					<h3>⚙️ Workflow</h3>
+					<ol>
+						<li>Extract geospatial features using <b>Google Earth Engine</b>.</li>
+						<li>Perform feature engineering and preprocessing.</li>
+						<li>Train ML models (XGBoost performed best).</li>
+						<li>Evaluate performance and deploy model.</li>
+					</ol>
+
+					<h3>📊 Results</h3>
+					<p><b>Best Model:</b> XGBoost <br> <b>Accuracy:</b> 75%</p>
+
+					<h3>🛠 Tools & Technologies</h3>
+					<p>Google Earth Engine, Python (scikit-learn, pandas), Remote Sensing (Sentinel-1 & 2).</p>
 				</section>
 			</div>
 		</div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
