@@ -95,15 +95,23 @@
 
 			/* Journal badge */
 			.major .date {
-				display: inline-block;
-				background: rgba(0,0,0,0.75);
-				color: #fff;
-				padding: 6px 14px;
-				border-radius: 20px;
-				font-size: 0.8rem;
-				letter-spacing: 1px;
-				margin-bottom: 10px;
-			}
+			display: inline-block;
+			background: rgba(0,0,0,0.75);
+			color: #fff;
+			padding: 6px 14px;
+			border-radius: 20px;
+			font-size: 0.8rem;
+			letter-spacing: 1px;
+		
+			/* remove inherited line styles */
+			border: none !important;
+			text-decoration: none !important;
+		}
+		
+		.major .date::before,
+		.major .date::after {
+			display: none !important;
+		}
 
 			h1 {
 				font-family: 'Playfair Display', serif;
