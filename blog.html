@@ -5,15 +5,18 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 
+		<!-- Google Font for premium typography -->
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 		<style>
 			body {
-				position: relative;
 				margin: 0;
-				min-height: 100vh;
-				overflow-x: hidden;
+				font-family: 'Inter', sans-serif;
+				background: #f5f7fa;
+				position: relative;
 			}
 
-			/* Faded background image */
+			/* Premium faded background */
 			body::before {
 				content: "";
 				position: fixed;
@@ -21,25 +24,135 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: url("images/Machine_Learning_Application.jpg") center center / cover no-repeat;
-				opacity: 0.07; /* adjust fade here */
+				background: linear-gradient(rgba(245,247,250,0.92), rgba(245,247,250,0.92)),
+							url("images/Machine_Learning_Application.jpg") center/cover no-repeat;
+				filter: blur(2px) grayscale(20%);
 				z-index: -1;
-				filter: grayscale(20%) blur(1.5px);
 			}
 
-			/* Ensure content stays above background */
-			#wrapper,
-			#main,
-			.post,
-			#header,
+			/* Header */
+			#header {
+				background: transparent;
+				text-align: center;
+				padding: 1rem 0;
+				font-weight: 600;
+				letter-spacing: 2px;
+			}
+
+			.logo {
+				font-size: 1.2rem;
+				color: #333;
+				text-decoration: none;
+			}
+
+			/* Navigation */
 			#nav {
-				position: relative;
-				z-index: 1;
+				text-align: center;
+				margin-bottom: 2rem;
+			}
+
+			#nav ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			#nav ul li {
+				display: inline-block;
+				margin: 0 15px;
+			}
+
+			#nav ul li a {
+				text-decoration: none;
+				color: #555;
+				font-weight: 500;
+				transition: 0.3s;
+			}
+
+			#nav ul li a:hover {
+				color: #000;
+			}
+
+			.active a {
+				color: #000;
+				border-bottom: 2px solid #000;
+				padding-bottom: 4px;
+			}
+
+			/* Main container */
+			#main {
+				display: flex;
+				justify-content: center;
+				padding: 2rem;
+			}
+
+			/* Glassmorphism card */
+			.post {
+				max-width: 900px;
+				background: rgba(255, 255, 255, 0.75);
+				backdrop-filter: blur(12px);
+				border-radius: 20px;
+				padding: 3rem;
+				box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+			}
+
+			/* Typography */
+			.major .date {
+				font-size: 0.9rem;
+				color: #777;
+				letter-spacing: 1px;
+			}
+
+			h1 {
+				font-family: 'Playfair Display', serif;
+				font-size: 2.5rem;
+				margin: 0.5rem 0 1.5rem;
+				color: #222;
+			}
+
+			h3 {
+				margin-top: 2rem;
+				color: #333;
+			}
+
+			p {
+				color: #555;
+				line-height: 1.7;
+			}
+
+			/* Image styling */
+			.image.main img {
+				width: 100%;
+				border-radius: 15px;
+				box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+			}
+
+			/* Button */
+			.button {
+				display: inline-block;
+				padding: 0.8rem 1.8rem;
+				border-radius: 30px;
+				background: #111;
+				color: #fff;
+				text-decoration: none;
+				font-size: 0.9rem;
+				letter-spacing: 1px;
+				transition: all 0.3s ease;
+			}
+
+			.button:hover {
+				background: #333;
+				transform: translateY(-2px);
+			}
+
+			.actions.special {
+				text-align: center;
+				margin-top: 2rem;
 			}
 		</style>
 	</head>
 
-	<body class="is-preload">
+	<body>
+
 		<div id="wrapper">
 
 			<header id="header">
@@ -68,14 +181,15 @@
 
 					<h3>Summary</h3>
 					<p>
-						This study benchmarks ML models at the species level within Kenyan agroforestry systems. 
-						We found that XGBoost and Gradient Boosting significantly outperform classical allometric models.
+						This study benchmarks machine learning models at the species level within Kenyan agroforestry systems. 
+						XGBoost and Gradient Boosting significantly outperform traditional allometric models, 
+						providing improved accuracy for biomass estimation and carbon accounting.
 					</p>
 
 					<ul class="actions special">
 						<li>
 							<a href="https://doi.org/10.1016/j.mlwa.2026.100880" 
-							   class="button large" 
+							   class="button" 
 							   target="_blank">
 							   Access Full Article
 							</a>
@@ -86,5 +200,6 @@
 			</div>
 
 		</div>
+
 	</body>
 </html>
